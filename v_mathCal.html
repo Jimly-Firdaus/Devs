@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="http://mathquill.com/lib/mathquill.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <link rel="stylesheet" href="v_mathCal.css">
+  </head>
+  <body>
+    <p class="">Type math here: <span id="math-field" class="w-100 h-5"></span>
+    <button type="button" class="keyboard-toggler" onclick="toggleKeyboard()"><img src="assets/keyboard_toggle_icon.svg" /></button>
+    </p>
+    <div class="result-bar">
+      Result : 
+      <div id="result"></div>
+    </div>
+    <div id="keyboard-wrapper">
+    <!-- Keyboard Section 1 -->
+      <div id="keyboard d-flex flex-column">
+        <div class="btn-group" role="group" aria-label="math functions">
+          <div class="section-1-wrapper d-flex flex-column">
+            <button type="button" class="" onclick='input("<")'><</button>
+            <button type="button" class="" onclick= 'input("\\leq")'><img src="assets/leq_symbol.svg" class="size-s"/></button>
+            <button type="button" class="" onclick= 'input("(")'>(</button>
+          </div>
+          <div class="section-1-wrapper d-flex flex-column mr-5">
+            <button type="button" class="" onclick='input(">")'>></button>
+            <button type="button" class="" onclick='input("\\geq")'><img src="assets/geq_symbol.svg" class="size-s"/></button>
+            <button type="button" class="" onclick='input(")")'>)</button>
+          </div>
+        </div>
+      </div>
+      <!-- Keyboard Section 2 -->
+      <div id="keyboard d-flex flex-column">
+        <div class="btn-group" role="group" aria-label="math functions">
+          <div class="section-2-wrapper d-flex flex-column">
+            <button type="button" class="" onclick='input("7")'>7</button>
+            <button type="button" class="" onclick= 'input("4")'>4</button>
+            <button type="button" class="" onclick= 'input("1")'>1</button>
+            <button type="button" class="" onclick= 'input("0")'>0</button>
+          </div>
+          <div class="section-2-wrapper d-flex flex-column">
+            <button type="button" class="" onclick='input("8")'>8</button>
+            <button type="button" class="" onclick= 'input("5")'>5</button>
+            <button type="button" class="" onclick= 'input("2")'>2</button>
+            <button type="button" class="" onclick= 'input(".")'>.</button>
+          </div>
+          <div class="section-2-wrapper d-flex flex-column">
+            <button type="button" class="" onclick='input("9")'>9</button>
+            <button type="button" class="" onclick= 'input("6")'>6</button>
+            <button type="button" class="" onclick= 'input("3")'>3</button>
+            <button type="button" class="" onclick= 'input("=")'>=</button>
+          </div>
+          <div class="section-2-wrapper d-flex flex-column mr-5">
+            <button type="button" class="" onclick='input("/")'><img src="assets/div_symbol.svg" class="size-s"/></button>
+            <button type="button" class="" onclick= 'input("*")'><img src="assets/times_symbol.svg" class="size-s"/></button>
+            <button type="button" class="" onclick= 'input("-")'><img src="assets/substract_symbol.svg" class="size-s"/></button>
+            <button type="button" class="" onclick= 'input("+")'><img src="assets/plus_symbol.svg" class="size-s"/></button>
+          </div>
+        </div>
+      </div>
+      <!-- Keyboard Section 3 -->
+      <div id="keyboard d-flex flex-column">
+        <div class="btn-group" role="group" aria-label="math functions">
+          <div class="section-3-wrapper d-flex flex-column">
+            <button type="button" class="" onclick='input("\\frac")'><img src="assets/fraction_symbol.svg" class=""/></button>
+            <button type="button" class="" onclick='inputSquare()'><img src="assets/square_symbol.svg" class=""/></button>
+            <button type="button" class="" onclick='input("\\degree")'><img src="assets/degree_symbol.svg" class=""/></button>
+          </div>
+          <div class="section-3-wrapper d-flex flex-column">
+            <button type="button" class="" onclick= 'input("^")'><img src="assets/n_power_symbol.svg" class=""/></button>
+            <button type="button" class="" onclick= 'input("\\forall")'><img src="assets/forall_symbol.svg" class=""/></button>
+          </div>
+          <div class="section-3-wrapper d-flex flex-column">
+            <button type="button" class="" onclick='input("\\pi")'><img src="assets/pi_symbol.svg" class="size-s"/></button>
+            <button type="button" class="" onclick='input("\\sqrt")'><img src="assets/sqrt_symbol.svg" class=""/></button>
+            <button type="button" class="backspace-btn" onclick='backspace()'><img src="assets/backspace.svg" class="" /></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="v_mathCal.js"></script>
+  </body>
+
+</html>
